@@ -1,4 +1,4 @@
 # YLogo
 
 Лендинг YLogo
-стек HTML/CSS/SASS
+стек HTML/CSS/SASS/jQuery/JS

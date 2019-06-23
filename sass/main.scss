@@ -1,8 +1,101 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap');
 // font-family: 'Noto Sans HK', sans-serif;
-$red: aqua;
-h1 {
-    background-color: $red;
-    font-family: 'Noto Sans HK', sans-serif;
-    color: white;
+@import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
+// font-family: 'Raleway', sans-serif;
+$width: 1280px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+a {
+    color: black!important;
+}
+
+a:hover {
+    text-decoration: none!important;
+}
+
+.fix-width {
+    width: $width;
+}
+
+.text--uppercase {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.h1,
+.h3 {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+}
+
+.h3 {
+    font-size: 25px;
+}
+
+.block {
+    margin-top: 7em;
+}
+
+.last-block {
+    padding-bottom: 7em;
+}
+
+.diseble-text {
+    color: grey;
+    opacity: 0.5;
+    text-align: left;
+    line-height: 1;
+}
+
+.centred {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.head--button {
+    margin-bottom: 1em;
+    padding: 1em 2em;
+    background-color: #fff;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+    border-color: white;
+}
+
+.circle--button {
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.25);
+    width: 7em;
+    height: 7em;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+    margin-left: 0.5em;
+    opacity: 0.5;
+    i {
+        font-size: 30px;
+    }
+}
+
+.circle--button:hover {
+    opacity: 1;
+    outline: none;
+}
+
+.head--button:hover {
+    opacity: 0.5;
+    outline: none;
+}
+
+@import 'head-block';
+@import 'main-block';
+// @import 'carousel';
+@import 'carousel-hr';
+@import 'footer-block';

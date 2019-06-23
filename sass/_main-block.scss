@@ -1,0 +1,118 @@
+.wrapper--main {
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.startup-wrapper {
+    display: flex;
+    justify-content: space-between;
+    &__two-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25%;
+        &__small-block {
+            height: 48%;
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__big-block {
+        width: 73%;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.wrapper--price {
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+    margin-top: 2em;
+    padding: 1.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    &__item-active {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            color: grey;
+        }
+        button {
+            margin-top: 3em;
+            margin-bottom: 0;
+        }
+        .price {
+            margin-top: 16px;
+            color: black;
+            font-size: 100px;
+            font-weight: 700;
+            sub {
+                color: grey;
+                font-size: 50px;
+                bottom: 0;
+            }
+            sup {
+                color: grey;
+                font-size: 50px;
+                top: -1em;
+            }
+        }
+    }
+    &__item {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        align-items: center;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+        p {
+            color: grey;
+            text-decoration: underline;
+        }
+        p:first-child {
+            text-decoration: none;
+        }
+        p:last-child {
+            color: rgba(0, 0, 0, 0.25);
+            opacity: 0.5;
+            margin-top: 4em;
+            margin-bottom: 0;
+            text-decoration: none;
+        }
+        .text--through {
+            text-decoration: line-through;
+        }
+        .price {
+            color: black;
+            font-size: 100px;
+            font-weight: 700;
+            text-decoration: none;
+            sub {
+                color: grey;
+                font-size: 50px;
+                bottom: 0;
+            }
+            sup {
+                color: grey;
+                font-size: 50px;
+                top: -1em;
+            }
+        }
+    }
+}

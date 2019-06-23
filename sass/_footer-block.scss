@@ -1,0 +1,54 @@
+footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.position-absolute {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
+.footer-wrapper {
+    display: flex;
+    text-align: left;
+    p {
+        line-height: 0.5;
+    }
+    &__left {
+        position: relative;
+        flex: 1;
+        line-height: 1;
+        padding-top: 4em;
+        height: 100%;
+        .bcg-grey {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(190, 190, 190, 0.25);
+            width: 200%;
+            height: 200%;
+        }
+    }
+    &__right {
+        flex: 1;
+        padding: 4em 0 4em 4em;
+        p:first-child {
+            font-size: 25px;
+        }
+        i {
+            padding-left: 0.5em;
+            font-size: 20px;
+        }
+        label {
+            width: 100%;
+        }
+        input {
+            margin-top: 1em;
+            border: none;
+            border-bottom: 1px solid black;
+            width: 90%;
+        }
+    }
+}
