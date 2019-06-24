@@ -52,7 +52,7 @@ a:hover {
   color: grey;
   opacity: 0.5;
   text-align: left;
-  line-height: 1;
+  line-height: 1.3;
 }
 
 .centred {
@@ -65,13 +65,18 @@ a:hover {
   text-align: center;
 }
 
-.head--button {
+.button-common {
   margin-bottom: 1em;
   padding: 1em 2em;
   background-color: #fff;
   -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
   border-color: white;
+}
+
+.button-common:hover {
+  opacity: 0.5;
+  outline: none;
 }
 
 .circle--button {
@@ -94,9 +99,8 @@ a:hover {
   outline: none;
 }
 
-.head--button:hover {
-  opacity: 0.5;
-  outline: none;
+.wrapper-slide {
+  padding: 1em 4em;
 }
 
 .fix-menu {
@@ -225,6 +229,74 @@ a:hover {
   margin: 0 0.3em 0 2em;
 }
 
+.wrapper__img {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper__img .block_img {
+  width: 75%;
+  height: 100%;
+}
+
+.wrapper__img .block_img-1 {
+  position: absolute;
+  left: 5%;
+}
+
+.wrapper__img .block_img-2 {
+  position: absolute;
+  left: 15%;
+  top: 15%;
+}
+
+.wrapper__img .gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#FFFEC6), to(transparent));
+  background: linear-gradient(to top, #FFFEC6, transparent);
+}
+
+.wrapper__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 4em;
+}
+
+.scroll-down__wrapper {
+  position: relative;
+  bottom: 0;
+  z-index: 99;
+  font-size: 25px;
+  font-style: italic;
+  text-transform: capitalize;
+  -webkit-animation: scroll 1s linear alternate infinite;
+          animation: scroll 1s linear alternate infinite;
+  cursor: pointer;
+}
+
+.scroll-down__wrapper:hover {
+  opacity: 0.5;
+}
+
+@-webkit-keyframes scroll {
+  100% {
+    bottom: 1em;
+  }
+}
+
+@keyframes scroll {
+  100% {
+    bottom: 1em;
+  }
+}
+
 .section-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -319,102 +391,13 @@ a:hover {
   transition: 1s;
 }
 
-.wrapper__img {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  position: relative;
-  overflow: hidden;
-}
-
-.wrapper__img .block_img {
-  width: 75%;
-  height: 100%;
-}
-
-.wrapper__img .block_img-1 {
-  position: absolute;
-  left: 5%;
-}
-
-.wrapper__img .block_img-2 {
-  position: absolute;
-  left: 15%;
-  top: 15%;
-}
-
-.wrapper__img .gradient {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 30%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#FFFEC6), to(transparent));
-  background: linear-gradient(to top, #FFFEC6, transparent);
-}
-
-.wrapper__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding-top: 4em;
-}
-
-.wrapper__text .diseble-text {
-  color: grey;
-  opacity: 0.5;
-  text-align: left;
-  line-height: 1;
-}
-
-.wrapper__text .head--button {
-  margin-bottom: 1em;
-  padding: 1em 2em;
-  background-color: #fff;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  border-color: white;
-}
-
-.wrapper__text .head--button:hover {
-  opacity: 0.5;
-  outline: none;
-}
-
-.scroll-down__wrapper {
-  position: relative;
-  bottom: 0;
-  z-index: 99;
-  font-size: 25px;
-  font-style: italic;
-  text-transform: capitalize;
-  -webkit-animation: scroll 1s linear alternate infinite;
-          animation: scroll 1s linear alternate infinite;
-}
-
-.scroll-down__wrapper:hover {
-  opacity: 0.5;
-}
-
-@-webkit-keyframes scroll {
-  100% {
-    bottom: 1em;
-  }
-}
-
-@keyframes scroll {
-  100% {
-    bottom: 1em;
-  }
-}
-
 .wrapper--main {
   margin-top: 5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .wrapper--main__item {
@@ -597,31 +580,25 @@ a:hover {
   top: -1em;
 }
 
-#carousel .carousel-control {
-  position: absolute;
-  top: 40%;
-  background: none;
-  color: grey;
-  font-size: 2.3em;
-}
-
-#carousel .carousel-control.left {
-  left: 0;
-}
-
-#carousel .carousel-control.right {
-  right: 0;
-}
-
-#carousel .carousel-indicators {
-  width: 90%;
-  margin: 0 auto;
+#carousel_1 .carousel-indicators {
+  width: 33%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 0;
+  left: 1em;
+  margin: 0;
+  height: 20px;
 }
 
-#carousel .carousel-indicators li {
+#carousel_1 .carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid grey;
   background: white;
   border-radius: 50%;
   -webkit-transform: scale(0.4);
@@ -632,13 +609,13 @@ a:hover {
   z-index: 19;
 }
 
-#carousel .carousel-indicators .active {
+#carousel_1 .carousel-indicators .active {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
 
-#carousel ol::before,
-#carousel ol::after {
+#carousel_1 ol::before,
+#carousel_1 ol::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -647,62 +624,208 @@ a:hover {
   z-index: 9;
 }
 
-#carousel ol::before {
+#carousel_1 ol::before {
   left: 0;
-  background: -webkit-gradient(linear, right top, left bottom, from(rgba(0, 0, 0, 0.2)), to(transparent));
-  background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.2), transparent);
+  background: -webkit-gradient(linear, right top, left bottom, from(rgba(0, 0, 0, 0.4)), to(white));
+  background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.4), white);
 }
 
-#carousel ol::after {
+#carousel_1 ol::after {
   right: 0;
-  background: -webkit-gradient(linear, right top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.2)));
-  background: linear-gradient(to bottom left, transparent, rgba(0, 0, 0, 0.2));
+  background: -webkit-gradient(linear, right top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(to bottom left, transparent, rgba(0, 0, 0, 0.4));
 }
 
-#carousel img {
-  width: 200px;
-  height: 200px;
+#carousel_1 img {
+  width: 100%;
+  height: 80%;
+  -webkit-box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 0px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 0px 10px rgba(0, 0, 0, 0.22);
+}
+
+#carousel_1 .carousel-item {
+  text-align: left;
+}
+
+#carousel_1 .carousel-item p {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+#carousel_1 .carousel-item p:first-child {
+  font-weight: bold;
+}
+
+#carousel_1 .carousel-item p:last-child {
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
+
+#carousel_1 .slider-list {
+  text-align: left;
+  margin-left: 1.5em;
+  color: red;
+}
+
+#carousel_1 .slider-list span {
+  color: grey;
+  margin-left: 0.5em;
+}
+
+#carousel_1 .slider-list li {
+  margin-top: 2em;
+  position: relative;
+}
+
+#carousel_1 .slider-list li::before {
+  content: '';
+  margin: 0;
+  display: block;
+  position: absolute;
+  margin-left: -1.4em;
+  top: 20%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border-color: grey;
+  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.p {
+  padding-left: 2em !important;
+  padding-right: 2em !important;
+}
+
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+  -webkit-transform: translate3d(0, 100%, 0) !important;
+  transform: translate3d(0, 100% 0) !important;
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+  -webkit-transform: translate3d(0, -100%, 0) !important;
+  transform: translate3d(0, -100%, 0) !important;
+}
+
+#carousel_2 .carousel-control {
+  position: absolute;
+  top: 40%;
+  background: none;
+  color: grey;
+  font-size: 2.3em;
+}
+
+#carousel_2 .carousel-control.left {
+  left: 0;
+}
+
+#carousel_2 .carousel-control.right {
+  right: 0;
+}
+
+#carousel_2 .carousel-indicators {
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#carousel_2 .carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid grey;
+  background: white;
+  border-radius: 50%;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  z-index: 19;
+}
+
+#carousel_2 .carousel-indicators .active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#carousel_2 ol::before,
+#carousel_2 ol::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 2px;
+  z-index: 9;
+}
+
+#carousel_2 ol::before {
+  left: 0;
+  background: -webkit-gradient(linear, right top, left bottom, from(rgba(0, 0, 0, 0.4)), to(white));
+  background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.4), white);
+}
+
+#carousel_2 ol::after {
+  right: 0;
+  background: -webkit-gradient(linear, right top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(to bottom left, transparent, rgba(0, 0, 0, 0.4));
+}
+
+#carousel_2 img {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
 }
 
-.carousel-item {
+#carousel_2 .carousel-item {
   border-left: none;
-  margin: 0;
   margin-bottom: 20px;
 }
 
-.carousel-item p {
+#carousel_2 .carousel-item p {
   position: relative;
   text-align: left;
 }
 
-.carousel-item p:first-child {
+#carousel_2 .carousel-item p:first-child {
   line-height: 1;
   font-size: 20px;
 }
 
-.carousel-item p:last-child {
+#carousel_2 .carousel-item p:last-child {
   margin-top: 2em;
 }
 
-.carousel-item p:last-child:before {
+#carousel_2 .carousel-item p:last-child:before {
   content: "\f10d";
   font-family: 'Fontawesome';
   color: grey;
   position: absolute;
-  top: 1em;
-  left: -2em;
-}
-
-.wrapper-slide {
-  padding: 4em;
+  font-size: 30px;
+  top: 0.5em;
+  left: -1.5em;
 }
 
 .box-shadow {
   -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
-  padding: 2em 0;
+  padding: 3em 0;
   margin: 0;
+}
+
+.box-shadow div {
+  padding: 0 2em;
 }
 
 footer {

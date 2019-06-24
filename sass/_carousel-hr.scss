@@ -1,4 +1,4 @@
-#carousel {
+#carousel_2 {
     .carousel-control {
         position: absolute;
         top: 40%;
@@ -17,6 +17,9 @@
         margin: 0 auto;
         justify-content: space-evenly;
         li {
+            width: 20px;
+            height: 20px;
+            border: 1px solid grey;
             background: white;
             border-radius: 50%;
             transform: scale(0.4);
@@ -39,50 +42,48 @@
     }
     ol::before {
         left: 0;
-        background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.2), transparent);
+        background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.4), white);
     }
     ol::after {
         right: 0;
-        background: linear-gradient(to bottom left, transparent, rgba(0, 0, 0, 0.2));
+        background: linear-gradient(to bottom left, transparent, rgba(0, 0, 0, 0.4));
     }
     img {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
     }
-}
-
-.carousel-item {
-    border-left: none;
-    margin: 0;
-    margin-bottom: 20px;
-    p {
-        position: relative;
-        text-align: left;
+    .carousel-item {
+        border-left: none;
+        margin-bottom: 20px;
+        p {
+            position: relative;
+            text-align: left;
+        }
+        p:first-child {
+            line-height: 1;
+            font-size: 20px;
+        }
+        p:last-child {
+            margin-top: 2em;
+        }
+        p:last-child:before {
+            content: "\f10d";
+            font-family: 'Fontawesome';
+            color: grey;
+            position: absolute;
+            font-size: 30px;
+            top: 0.5em;
+            left: -1.5em;
+        }
     }
-    p:first-child {
-        line-height: 1;
-        font-size: 20px;
-    }
-    p:last-child {
-        margin-top: 2em;
-    }
-    p:last-child:before {
-        content: "\f10d";
-        font-family: 'Fontawesome';
-        color: grey;
-        position: absolute;
-        top: 1em;
-        left: -2em;
-    }
-}
-
-.wrapper-slide {
-    padding: 4em;
 }
 
 .box-shadow {
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
-    padding: 2em 0;
+    padding: 3em 0;
     margin: 0;
+    div {
+        padding: 0 2em;
+    }
 }
