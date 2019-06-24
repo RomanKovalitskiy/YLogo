@@ -694,7 +694,7 @@ a:hover {
           box-sizing: border-box;
 }
 
-.p {
+.pl-pr-2em {
   padding-left: 2em !important;
   padding-right: 2em !important;
 }
