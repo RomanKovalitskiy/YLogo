@@ -1,7 +1,8 @@
 # YLogo
 
-Лендинг YLogo
-стек HTML/CSS/SASS/jQuery/Bootstrap/JS
+## Landing YLogo
+
+## Stack HTML/CSS/SASS/jQuery/Bootstrap/JS
 ---------- 
 ![alt text](img/scrin1.png)
 ---------- 
