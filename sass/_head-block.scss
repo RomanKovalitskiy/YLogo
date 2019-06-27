@@ -59,6 +59,9 @@
         display: flex;
         flex-wrap: nowrap;
     }
+    &__footer {
+        position: relative;
+    }
 }
 
 .header {
